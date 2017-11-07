@@ -8,7 +8,7 @@ module I18nAdmin
       attr_reader :spreadsheet, :sheet
       attr_accessor :export_file
 
-      def perform(locale, client_locale: I18n.locale)
+      def perform(locale, client_locale )
         @locale = locale
         @client_locale = client_locale
         @spreadsheet = Spreadsheet::Workbook.new
@@ -77,7 +77,7 @@ module I18nAdmin
         end
       end
 
-      def monitoring_data(_, state)
+      def monitoring_data(_, id, state)
         { url: export_file.file.url } if state == 'complete'
       end
 
