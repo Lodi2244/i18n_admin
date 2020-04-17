@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sidekiq'
   s.add_dependency 'sidekiq-job_monitor'
   s.add_dependency 'paperclip'
+  s.add_dependency 'i18n', ">= 0.7"
 
   s.add_development_dependency "sqlite3"
 end
